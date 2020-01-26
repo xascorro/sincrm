@@ -1,0 +1,72 @@
+#### SINCRM v2.1.1 (16-02-2017)
+#####Cambios en informes
+- Se optimizan consultas para informe preinscripciones figuras y se ordena por club, apellidos en vez de por id de inscripción
+- En el informe de resultados figuras se sitúa la penalización en la misma fila de la figura penalizada.
+#####Edición de los detalles de una competición, hora de inicio, final, si es de figuras, federado, header y footer etc
+Completado
+
+
+#### SINCRM v2.1 (12-12-2014)
+#####Se empieza a desarrollar con GIT en bitbucket.org
+
+#####Mejorar menu lateral
+- Se reordena el menú 
+- Se cambian y añaden iconos
+
+####Cambios en informes
+- Los informes de preinscripción y orden de salida se imprimen aprovechando mejor el papel (anteriormente una categoría por folio)
+
+####Corrección de errores
+- Actualizar includes en ficheros que hacen uso de los archivos de conexión a la base de datos
+<hr>
+#### SINCRM v2.0 (05-12-2014)
+#####Posibilidad de guardado y carga de dumps de la base de datos
+- Ahora es posible hacer, guardar y borrar copias de la base de datos, de este modo evitamos el uso de phpmyadmin u otras herramientas de gestión de base de datos a la hora de guardar o restaurar la base de datos
+
+#####Configuración de la base de datos y host remoto para actualizaciones `(PREVISTO)`
+- Se crea menú
+
+#####Actualizado font-awesome a la version 4.2.0
+
+#####Mejorar menu lateral
+- Se reordena el menú 
+- Se cambian y añaden iconos `(INCOMPLETO)`
+
+#####Edición de los detalles de una competición, hora de inicio, final, si es de figuras, si es una liga etc `(PREVISTO)`
+- Se crea menú
+
+#####Añadido actualizador
+- Se añade modulo para actualizar el programa de forma remota, controlando la versión de este
+- También es posible generar actualizaciones del programa con ACTUALIZADOR MAGIC `(INCOMPLETO)`
+
+#####Añadido **Imagenes** `(INCOMPLETO)`
+- Se crea menú
+- Visor y gestor de imagenes para logos de clubs, federaciones, headers y footers en informes etc `(PREVISTO)`
+
+#####Añadido **Changelog** `(INCOMPLETO)`
+- Muestra los cambios añadidos en las distintas versiones
+
+#####Añadida **Ayuda** 
+- Se crea menú
+- Ayuda de usuario para SINCRM `(INCOMPLETO)`
+
+#####Cambios en informes 
+- Informe de *Orden de salida* en competición de figuras se añaden campos y se reordena quedando [Licencia, Nombre, Año, Club, Orden]
+- En los *Resultados de figuras* se añade hora de inicio y fin de la competición y se muestra en la hoja técnica de los resultados
+- Se optimiza la conexión a base de datos en algunos informes.
+
+#####Mejorar usabilidad
+- Se muestran las fechas en formato español dd-mm-aaaa
+- Se revisa y retoca el contenido de Competiciones
+- Se revisa y retoca el contenido de Federaciones
+- Se revisa y retoca el contenido de Clubs
+- Cambiar texto Guardar, Editar, Cancelar, Borrar y por iconos `(INCOMPLETO)`
+<hr>
+#### SINCRM v1.2 (13-06-2014)
+- Se añade la opción de obtener clasificación de una liga de figuras
+<hr>
+#### SINCRM v1.1 (26-04-2014)
+- Se añade la opción de puntuar jornadas figuras
+<hr>
+#### SINCRM v1.0 (11-04-2014)
+Release inicial
