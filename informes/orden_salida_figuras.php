@@ -42,6 +42,8 @@ mysql_query("SET NAMES 'utf8'");
 	    $GLOBALS["organizador"] = $registro['organizador']; 
 	    $GLOBALS["header"] = $registro['header_informe'];  
 	    $GLOBALS["footer"] = $registro['footer_informe']; 
+	    $GLOBALS["enmascarar_licencia"] = $registro['enmascarar_licencia'];
+
 	}
 //****************************//
 $titulo = $_GET['titulo'];
@@ -145,7 +147,7 @@ while($fase = mysql_fetch_array($fases)){
 	
 	$html = '<table nobr="true" style="margin-top=10px">';
 	//segun titulo de documento
-		$html .= '<thead><tr><th><h2>'.$nombre_categoria.'</h2></th></tr><tr><th width="13%"><h4>Licencia</h4></th><th width="48%"><h4>Nombre</h4></th><th width="7%"><h4>Año</h4></th><th width="15%"><h4>Club</h4></th><th width="18%" aling="right"><h4>Orden</h4></th></tr></thead>';
+		$html .= '<thead><tr><th><h2>'.$nombre_categoria.'</h2></th></tr><tr><th width="14%"><h4>Licencia</h4></th><th width="48%"><h4>Nombre</h4></th><th width="7%"><h4>Año</h4></th><th width="15%"><h4>Club</h4></th><th width="18%" aling="right"><h4>Orden</h4></th></tr></thead>';
 	
 	$par=1;
 	
@@ -190,7 +192,7 @@ while($fase = mysql_fetch_array($fases)){
 			$text_orden = substr($text_orden, 0,-2);
 	
 		
-		$html .='<tr style="background-color:'.$rutina_color.'"><td width="13%">'.$licencia.'</td><td width="48%">'.$nombre_nadadora.'</td><td width="7%">'.$año_nadadora.'</td><td width="15%">'.$nombre_club.'</td><td width="18%" style="text-align:right;">'.$text_orden.'</td></tr>';
+		$html .='<tr style="background-color:'.$rutina_color.'"><td width="14%">'.enmascaraLicencia($licencia).'</td><td width="48%">'.$nombre_nadadora.'</td><td width="7%">'.$año_nadadora.'</td><td width="15%">'.$nombre_club.'</td><td width="18%" style="text-align:right;">'.$text_orden.'</td></tr>';
 				
 		
 		

@@ -44,6 +44,7 @@ $result = mysql_query($query);
 	    $GLOBALS["organizador"] = $registro['organizador'];
         $GLOBALS["header_image"] = "../".$registro['header_informe'];
 	    $GLOBALS["footer_image"] = "../".$registro['footer_informe'];
+	    $GLOBALS["enmascarar_licencia"] = $registro['enmascarar_licencia'];
 }
 //****************************//
 $titulo = $_GET['titulo'];
@@ -165,7 +166,7 @@ while($fase = mysql_fetch_array($fases)){
 			$numero = '0'.$numero_rutinas.' - ';
 		else
 			$numero = $numero_rutinas.' - ';
-		$html .='<tr nobr="true" style="background-color:'.$rutina_color.'"><td width="55%">'.$numero.$rutina['apellidos'].', '.$rutina['nombre'].'</td><td width="17%">'.$rutina['licencia'].'</td><td width="10%">'.substr($rutina['fecha_nacimiento'],0,4).'</td><td width="16%" style="text-align:right;">'.$rutina['nombre_corto'].'</td></tr>';
+		$html .='<tr nobr="true" style="background-color:'.$rutina_color.'"><td width="55%">'.$numero.$rutina['apellidos'].', '.$rutina['nombre'].'</td><td width="17%">'.enmascaraLicencia($rutina['licencia']).'</td><td width="10%">'.substr($rutina['fecha_nacimiento'],0,4).'</td><td width="16%" style="text-align:right;">'.$rutina['nombre_corto'].'</td></tr>';
 
 	}
 	$html .= '</tbody></table>';

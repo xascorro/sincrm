@@ -75,7 +75,7 @@ class MYPDF extends TCPDF {
         // Logo
         $this->SetFont('helvetica', 12);
 $x = 15;
-$y = 270;
+$y = 272;
 $w = '180';
 $h = '';
         $this->Image($GLOBALS['footer_image'], $x, $y, $w, $h, 'JPG', '', '', false, 300, '', false, false, 0, 'L', false, false);

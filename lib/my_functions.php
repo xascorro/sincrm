@@ -80,3 +80,10 @@ function fechaADate ($fecha){
 	else
 		return '';
 }
+
+//enmascara el numero de licencia
+function enmascaraLicencia ($licencia){
+    $licencia = substr_replace($licencia, str_repeat('X',$GLOBALS["enmascarar_licencia"]), sizeof($licencia)-$GLOBALS['enmascarar_licencia']-1);
+    return $licencia;
+
+}
